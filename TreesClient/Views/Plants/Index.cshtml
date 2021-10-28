@@ -1,0 +1,18 @@
+@using TreesClient.Models
+
+<h1>All Plants:</h1>
+
+<ol>
+@foreach (Plant plant in Model)
+{
+    <ul>
+        <li>ID: @plant.PlantId</li>
+        <li>Strain: @plant.Strain</li>
+        <li>Type: @plant.Type</li>
+        <li>Farm: @plant.Farm</li>
+        <li>Description: @plant.Description</li>
+    </ul>
+    <a href="/Plants/Details/@(plant.PlantId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
